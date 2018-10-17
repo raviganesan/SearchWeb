@@ -40,10 +40,10 @@ namespace SearchWeb.Controllers
             //item => item.GroupName.IndexOf(term, StringComparison.InvariantCultureIgnoreCase) >= 0
             //);
 
-            var data1 = GetSettings().SelectMany(a => a.GroupName.Equals(searchString, StringComparison.OrdinalIgnoreCase) );
+           // var data1 = GetSettings().SelectMany(a => a.GroupName.Equals(searchString, StringComparison.OrdinalIgnoreCase) );
 
 
-            return Json(data1, JsonRequestBehavior.AllowGet);
+            return Json(filteredItems, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult About()
